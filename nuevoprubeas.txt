@@ -1,15 +1,21 @@
-
-
 <?php
     require_once '../control/PeliculaControl.php';
     $peliculaControl = new PeliculaControl();
     $peliculas = $peliculaControl->buscarTodos();
 ?>
-<?php
-include 'header.php';
-?>
 
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video tienda - Películas</title>
+    <link rel="stylesheet" href="../recursos/css/bootstrap.min.css" />
+</head>
+<?php 
+include 'Actividad2/navbar.php/'?>
+<body>
     <div class="container py-5">
         <div class="card">
             <div class="card-header">
@@ -18,7 +24,7 @@ include 'header.php';
 
             <div class="card-body">
                 <div class="card-title">
-                    <a class="btn btn-sm btn-info" href="pelicula_vista_actualizar.php">nueva película</a>
+                    <a class="btn btn-sm btn-info" href="pelicula_actualizar.php">nueva película</a>
                 </div>
                 <table class="table table-striped table-sm">
                     <tr>
@@ -49,7 +55,6 @@ include 'header.php';
             </div>
         </div>
     </div>
+</body>
 
-<?php 
-include 'footer.php';
-?>
+</html>

@@ -1,0 +1,18 @@
+agregar header.php
+footer.php
+navbar.php y todo por  includes
+
+
+agregar al menu index un iamgenes y cosas esteticas para mejor presentacion
+
+agregar un menu index para redireccionar a 
+listado
+agregar nuevas peliculas
+agregar la opcion de colocar imagenes 
+agregar filtros de busqueda en el listado de peliculass
+
+
+agregar la opcion de sinopsis 
+
+
+

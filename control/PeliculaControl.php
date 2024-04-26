@@ -95,4 +95,36 @@ class PeliculaControl {
             return false;
         }         
     } // fin del método modificar
+
+    public function buscarPorCriterios($titulo, $genero, $año) {
+        $sql = "SELECT * FROM pelicula WHERE 1";
+    
+        // Aplicar filtros según los criterios proporcionados
+        if (!empty($titulo)) {
+            $sql .= " AND titulo LIKE '%$titulo%'";
+        }
+        if (!empty($genero)) {
+            $sql .= " AND genero = '$genero'";
+        }
+        if (!empty($año)) {
+            $sql .= " AND año = $año";
+        }
+    
+        // Ejecutar la consulta
+        try {
+            $prep = $this->cnx->prepare($sql);
+            $prep->execute();
+            $peliculas = $prep->fetchAll(PDO::FETCH_OBJ);
+            return $peliculas;
+        } catch (PDOException $ex) {
+            die($ex->getMessage());
+        }
+    }
+    
+
+
+
+
+
+
 }
